@@ -5,7 +5,7 @@ set nocompatible
 " file type specific settings
 filetype on " enable file type detection
 filetype plugin on " load the plugins for specific file types
-filetype indent on " automatically indent code
+" filetype indent on " automatically indent code
 
 " Display settings
 set encoding=utf-8 " encoding used for displaying file
@@ -18,7 +18,7 @@ set relativenumber
 set fileencoding=utf-8 " encoding used when saving file
 
 " Yaml files
-autocmd FileType yaml setlocal ai ts=2 sw=2 et listchars=trail:~,nbsp:_,extends:>,precedes:< list 
+autocmd FileType yaml setlocal ts=2 sw=2 et listchars=trail:~,nbsp:_,extends:>,precedes:< list cursorcolumn
 
 " Python files
 autocmd FileType py setlocal ai ts=4 sw=4 et

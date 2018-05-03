@@ -1,0 +1,24 @@
+---
+- name: Configure my RHEL working environment
+  hosts: workstations
+
+  tasks:
+    - name: Install tmux
+      yum:
+        name: tmux
+        state: installed
+
+    - name: Install tree
+      yum:
+        name: tree
+        state: installed
+
+    - name: Update bash_profile
+      blockinfile:
+        dest: /home/{{ login }}/.bash_profile
+        block: "{{ lookup('file', 'file/bash_profile') }}"
+
+    - name: Update vimrc
+      blockinfile:
+        dest: /home/{{ login }}/.vimrc
+        block: "{{ lookup('file', 'file/vimrc') }}"
