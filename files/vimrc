@@ -18,10 +18,10 @@ set relativenumber
 set fileencoding=utf-8 " encoding used when saving file
 
 " Yaml files
-autocmd FileType yaml setlocal ts=2 sw=2 et listchars=trail:~,nbsp:_,extends:>,precedes:< list cursorcolumn
+autocmd FileType yaml setlocal ai ts=2 sw=2 et listchars=trail:~,nbsp:_,extends:>,precedes:< list cursorcolumn
 
 " Python files
-autocmd FileType py setlocal ai ts=4 sw=4 et
+autocmd FileType py setlocal ai ts=4 sw=4 et listchars=trail:~,nbsp:_,extends:>,precedes:< list cursorcolumn
 
 " syntax highlighting
 syntax enable " enable syntax highlighting

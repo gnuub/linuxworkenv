@@ -6,19 +6,21 @@
     - name: Install tmux
       yum:
         name: tmux
-        state: installed
+        state: latest
 
     - name: Install tree
       yum:
         name: tree
-        state: installed
+        state: latest
 
     - name: Update bash_profile
       blockinfile:
-        dest: /home/{{ login }}/.bash_profile
-        block: "{{ lookup('file', 'file/bash_profile') }}"
+        create: True
+        dest: /home/{{ profile }}/.bash_profile
+        block: "{{ lookup('file', 'files/bash_profile') }}"
 
     - name: Update vimrc
       blockinfile:
-        dest: /home/{{ login }}/.vimrc
-        block: "{{ lookup('file', 'file/vimrc') }}"
+        create: True
+        dest: /home/{{ profile }}/.vimrc
+        block: "{{ lookup('file', 'files/vimrc') }}"

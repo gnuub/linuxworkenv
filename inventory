@@ -1,1 +1,6 @@
-localhost
+[workstations]
+catl0xlas00423.corp.cox.com
+
+[workstations:vars]
+user = ssaypras
+profile = ssaypras
