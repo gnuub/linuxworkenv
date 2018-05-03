@@ -1,0 +1,30 @@
+" Below added by Sookie
+" VIM mode
+set nocompatible
+
+" file type specific settings
+filetype on " enable file type detection
+filetype plugin on " load the plugins for specific file types
+filetype indent on " automatically indent code
+
+" Display settings
+set encoding=utf-8 " encoding used for displaying file
+set ruler " show the cursor position all the time
+set showmatch " highlight matching braces
+set showmode " show insert/replace/visual mode
+set relativenumber
+
+" write settings
+set fileencoding=utf-8 " encoding used when saving file
+
+" Yaml files
+autocmd FileType yaml setlocal ai ts=2 sw=2 et listchars=trail:~,nbsp:_,extends:>,precedes:< list 
+
+" Python files
+autocmd FileType py setlocal ai ts=4 sw=4 et
+
+" syntax highlighting
+syntax enable " enable syntax highlighting
+
+" Characters for displaying non-printable characters
+set listchars=eol:$,tab:>-,trail:~,nbsp:_,extends:>,precedes:<
