@@ -8,6 +8,6 @@ Update the inventory file with host(s) to update.
 Update the variables to your information like your profile name.
 
 You will need sudo access for yum.  Invoke the playbook as follows:
-'''
+```
 ansible-playbook linuxworkenv.yml --ask-become-pass
-'''
+```
