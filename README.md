@@ -12,7 +12,7 @@ Some Ansible know-how can easily extend this to add more apps and update differe
 
 To use, git clone the repo to your Ansible Control Server.  Alternatively, you can download it directly from the repo then copy the project
 to your Ansible Control Server. Update the inventory file with the host(s) and user informaiton. The playbook expects to update all hosts found under
-[workstations] group. The playbook also expects the *user* variable and it should be the login you use for ssh and the *profile* variable which
+the [workstations] group. The playbook also expects the *user* variable and it should be the login you use for ssh and the *profile* variable which
 is your login id (basically both variables should match).
 
 #### File Tree
