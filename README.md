@@ -15,6 +15,7 @@ to your Ansible Control Server. Be sure to update the inventory file with host(s
 Update the variables to your information like your profile name.
 
 **File Tree**
+```
 .
 ├── ansible.cfg
 ├── files
@@ -23,7 +24,7 @@ Update the variables to your information like your profile name.
 ├── inventory
 ├── linuxworkenv.yml
 └── README.md
-
+```
 
 You will need sudo access for yum.  Invoke the playbook as follows:
 ```
