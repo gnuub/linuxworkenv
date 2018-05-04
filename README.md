@@ -7,7 +7,7 @@ Ansible Playbook for a yum managed server or workstation to make the following u
 * Configure Vim environment
 * Configure bash environment
 
-This playbook is intended to be used as a base for easy work environment configuration in a RHEL environment.
+This playbook is intended to be used as a base for automated work environment configuration in a RHEL environment.
 Some Ansible know-how can easily extend this to add more apps and configuration file appends to suit your needs. 
 
 To use, git clone the repo to your Ansible Control Server.  Alternatively, you can download it directly from the repo then copy the project
