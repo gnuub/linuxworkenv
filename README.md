@@ -21,6 +21,7 @@ is your login id (basically both variables should match). You will need sudo acc
 ├── ansible.cfg
 ├── files
 │   ├── bash_profile
+│   ├── tmux.conf
 │   └── vimrc
 ├── inventory
 ├── linuxworkenv.yml
