@@ -33,3 +33,9 @@
         dest: /home/{{ profile }}/.vimrc
         marker: '" {mark} ANSIBLE MANAGED BLOCK'
         block: "{{ lookup('file', 'files/vimrc') }}"
+
+    - name: Update tmux.conf
+      blockinfile:
+        create: True
+        dest: /home/{{ profile }}/.tmux.conf
+        block: "{{ lookup('file', 'files/tmux.conf') }}"
