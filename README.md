@@ -6,6 +6,7 @@ Ansible Playbook for a yum managed server or workstation to make the following u
 * Install latest "Vim" editor
 * Configure Vim environment
 * Configure bash environment
+* Configure tmux environment
 
 This playbook is intended to be used as a base for automated work environment configuration in a RHEL environment.
 Some Ansible know-how can easily extend this to add more apps and update different configuration files to suit your needs. 
@@ -21,6 +22,7 @@ is your login id (basically both variables should match). You will need sudo acc
 ├── ansible.cfg
 ├── files
 │   ├── bash_profile
+│   ├── tmux.conf
 │   └── vimrc
 ├── inventory
 ├── linuxworkenv.yml

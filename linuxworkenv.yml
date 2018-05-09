@@ -6,19 +6,12 @@
   become_method: sudo
 
   tasks:
-    - name: Install tmux
+    - name: Install tmux, tree, and vim to latest
       yum:
-        name: tmux
-        state: latest
-
-    - name: Install tree
-      yum:
-        name: tree
-        state: latest
-
-    - name: Make sure VIM is at latest
-      yum:
-        name: vim
+        name:
+          - tree
+          - tmux
+          - vim
         state: latest
 
     - name: Update bash_profile
@@ -33,3 +26,9 @@
         dest: /home/{{ profile }}/.vimrc
         marker: '" {mark} ANSIBLE MANAGED BLOCK'
         block: "{{ lookup('file', 'files/vimrc') }}"
+
+    - name: Update tmux.conf
+      blockinfile:
+        create: True
+        dest: /home/{{ profile }}/.tmux.conf
+        block: "{{ lookup('file', 'files/tmux.conf') }}"
