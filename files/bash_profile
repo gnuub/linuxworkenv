@@ -1,5 +1,3 @@
-#Added by Sookie via Ansbile
-#
 # Set bash to be Vi like
 set -o vi
 
