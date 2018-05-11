@@ -2,9 +2,9 @@
 - name: Configure my RHEL working environment
   hosts: workstations
   gather_facts: False
+  user: "{{ user }}"
   become: True
   become_method: sudo
-
   tasks:
     - name: Install tmux, tree, and vim to latest
       yum:
@@ -14,21 +14,26 @@
           - vim
         state: latest
 
+- name: Update Configuration files
+  hosts: workstations
+  gather_facts: True
+  user: "{{ user }}"
+  tasks:
     - name: Update bash_profile
       blockinfile:
         create: True
-        dest: /home/{{ profile }}/.bash_profile
+        dest: "{{ ansible_env.HOME }}/.bash_profile"
         block: "{{ lookup('file', 'files/bash_profile') }}"
 
     - name: Update vimrc
       blockinfile:
         create: True
-        dest: /home/{{ profile }}/.vimrc
+        dest: "{{ ansible_env.HOME }}/.vimrc"
         marker: '" {mark} ANSIBLE MANAGED BLOCK'
         block: "{{ lookup('file', 'files/vimrc') }}"
 
     - name: Update tmux.conf
       blockinfile:
         create: True
-        dest: /home/{{ profile }}/.tmux.conf
+        dest: "{{ ansible_env.HOME }}/.tmux.conf"
         block: "{{ lookup('file', 'files/tmux.conf') }}"
