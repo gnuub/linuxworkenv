@@ -1,6 +1,2 @@
 [workstations]
 localhost
-
-[workstations:vars]
-user = ssaypras
-profile = ssaypras

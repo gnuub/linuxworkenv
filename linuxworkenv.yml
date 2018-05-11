@@ -2,6 +2,7 @@
 - name: Configure my RHEL working environment
   hosts: workstations
   gather_facts: False
+  user: "{{ user }}"
   become: True
   become_method: sudo
   tasks:
@@ -16,6 +17,7 @@
 - name: Update Configuration files
   hosts: workstations
   gather_facts: True
+  user: "{{ user }}"
   tasks:
     - name: Update bash_profile
       blockinfile:
