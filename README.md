@@ -37,7 +37,8 @@ If you have exchanged keys with the remote hosts, invoke the playbook as follows
 ```
 ansible-playbook -i ~/inventory -C -D --limit=catl0xlas00423.corp.cox.com linuxworkenv.yml --ask-become-pass -e 'user=<username>'
 ```
+
 If you have have not exchanged keys with the remote hosts, invoke the playbook as follows:
 ```
-ansible-playbook -i ~/inventory -C -D --limit=catl0xlas00423.corp.cox.com linuxworkenv.yml --ask-become-pass -e 'user=ssaypras' -k
+ansible-playbook -i ~/inventory -C -D --limit=catl0xlas00423.corp.cox.com linuxworkenv.yml --ask-become-pass -e 'user=<username>' -k
 ```
