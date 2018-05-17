@@ -1,3 +1,7 @@
+# Set the default path and add my own paths
+PATH = $PATH:$HOME/AppData
+export PATH
+
 # Set bash to be Vi like
 set -o vi
 
