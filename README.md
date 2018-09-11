@@ -1,13 +1,44 @@
 # linuxworkenv
 ---
-Ansible Playbook to update a yum managed server or workstation with a custom Vim environment, bash 
-environment variables, "tree" filesystem viewer utility, and "tmux" terminal utility.
+Ansible Playbook for a yum managed server or workstation to make the following updates:
+* Install latest "tree" filesystem viewer utility
+* Install latest "tmux" terminal utility
+* Install latest "Vim" editor
+* Configure Vim environment
+* Configure bash environment
+* Configure tmux environment
 
-To use, git close the repo to your Ansible Control Server.
-Update the inventory file with host(s) to update.
-Update the variables to your information like your profile name.
+This playbook is intended to be used as a base for deploying a consistent work environment configuration on a RHEL system through automation so to be iterable and predictable. 
+Some Ansible know-how can easily extend this to add more apps and update different configuration files to suit your needs. 
 
-You will need sudo access for yum.  Invoke the playbook as follows:
+To use, git clone the repo to your Ansible Control Server.
+Alternatively, you can download it directly from the repo then copy the project to your Ansible Control Server.
+Update the inventory file with the host(s) informaiton under the [workstations] group.
+Thist playbook is written to act against the [worksations] group found in the inventory file.
+The playbook expects the *user* variable to be given as a parameter in the command line or will fail. 
+This is the user account you are using to access all the hosts under the [workstations] group.
+The account you use will need sudo access for yum.
+Please see examples at the bottom. 
+
+#### File Tree
 ```
-ansible-playbook linuxworkenv.yml --ask-become-pass
+.
+├── ansible.cfg
+├── files
+│   ├── bash_profile
+│   ├── tmux.conf
+│   └── vimrc
+├── inventory
+├── linuxworkenv.yml
+└── README.md
+```
+
+If you have exchanged keys with the remote hosts, invoke the playbook as follows: (Only prompted for sudo password)
+```
+ansible-playbook linuxworkenv.yml --ask-become-pass -e 'user=<username>'
+```
+
+If you have have not exchanged keys with the remote hosts, invoke the playbook as follows: (Prompted for both user and sudo password)
+```
+ansible-playbook linuxworkenv.yml --ask-become-pass -e 'user=<username>' -k
 ```
