@@ -12,7 +12,7 @@
           - tree
           - tmux
           - vim
-        state: latest
+        state: present
 
 - name: Update Configuration files
   hosts: workstations
