@@ -20,6 +20,12 @@ set fileencoding=utf-8 " encoding used when saving file
 " Yaml files
 autocmd FileType yaml setlocal ai ts=2 sw=2 et listchars=trail:~,nbsp:_,extends:>,precedes:< list cursorcolumn
 
+" SQL files
+autocmd FileType sql setlocal ai ts=4 sw=4 et listchars=trail:~,nbsp:_,extends:>,precedes:< list cursorcolumn
+
+" JSON files
+autocmd FileType json setlocal ai ts=2 sw=2 et listchars=trail:~,nbsp:_,extends:>,precedes:< list cursorcolumn
+
 " Python files
 autocmd FileType py setlocal ai ts=4 sw=4 et listchars=trail:~,nbsp:_,extends:>,precedes:< list cursorcolumn
 
