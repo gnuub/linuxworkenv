@@ -35,10 +35,10 @@ Please see examples at the bottom.
 
 If you have exchanged keys with the remote hosts, invoke the playbook as follows: (Only prompted for sudo password)
 ```
-ansible-playbook linuxworkenv.yml --ask-become-pass -e 'user=<username>'
+ansible-playbook linuxworkenv.yml -e 'user=<username>'
 ```
 
 If you have have not exchanged keys with the remote hosts, invoke the playbook as follows: (Prompted for both user and sudo password)
 ```
-ansible-playbook linuxworkenv.yml --ask-become-pass -e 'user=<username>' -k
+ansible-playbook linuxworkenv.yml -e 'user=<username>' -k
 ```
