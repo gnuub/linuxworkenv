@@ -6,6 +6,10 @@ if match($TERM, "screen")!=-1
   set term=xterm
 endif
 
+" Map Paste Mode to F2 for toggling raw pasting, resolves auto-indenting when copying code
+" Recommended to toggle off when raw pasting isn't needed.
+set pastetoggle=<F2>
+
 " file type specific settings
 filetype on " enable file type detection
 filetype plugin on " load the plugins for specific file types
