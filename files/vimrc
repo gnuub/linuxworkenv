@@ -1,6 +1,11 @@
 " VIM mode
 set nocompatible
 
+" Detect TERM=screen and switch to xterm
+if match($TERM, "screen")!=-1
+  set term=xterm
+endif
+
 " file type specific settings
 filetype on " enable file type detection
 filetype plugin on " load the plugins for specific file types
