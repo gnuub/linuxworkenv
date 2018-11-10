@@ -36,7 +36,7 @@ autocmd FileType sql setlocal ai ts=4 sw=4 et listchars=trail:~,nbsp:_,extends:>
 autocmd FileType json setlocal ai ts=2 sw=2 et listchars=trail:~,nbsp:_,extends:>,precedes:< list cursorcolumn
 
 " Python files
-autocmd FileType py setlocal ai ts=4 sw=4 et listchars=trail:~,nbsp:_,extends:>,precedes:< list cursorcolumn
+autocmd FileType python setlocal ai textwidth=79 ts=4 sw=4 et softtabstop=4 shiftround listchars=trail:~,nbsp:_,extends:>,precedes:< list cursorcolumn
 
 " syntax highlighting
 syntax enable " enable syntax highlighting
