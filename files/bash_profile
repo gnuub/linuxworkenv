@@ -1,6 +1,7 @@
 # Set the default path and add my own paths
 export PATH=$PATH:$HOME/bin
 
+
 # Set bash to be Vi like
 set -o vi
 
