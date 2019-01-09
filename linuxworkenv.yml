@@ -7,12 +7,13 @@
   become_method: sudo
   tasks:
     - name: Install tmux, tree, and vim to latest
-      yum:
+      apt:
         name:
           - tree
           - tmux
           - vim
         state: present
+        update_cache: yes
 
 - name: Update Configuration files
   hosts: workstations
